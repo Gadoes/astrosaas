@@ -1,0 +1,370 @@
+<section id="faq">
+
+
+
+
+    <div
+      class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+        <div class="text-center lg:text-left">
+          <div>
+            <p
+              class="text-3xl font-normal tracking-tight text-black font-display"
+            >
+              Frequently asked questions
+            </p>
+            <p class="text-base mt-4 text-zinc-500">
+              Take a look at the following questions to complete your understanding of what Instrumentum does and doesn't do!
+            </p>
+          </div>
+        </div>
+        <div
+          x-data="{
+    activeAccordion: '',
+    setActiveAccordion(id) {
+    this.activeAccordion = (this.activeAccordion == id) ? '' : id
+    }
+    }"
+          class="relative w-full mx-auto font-normal lg:col-span-2"
+        >
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-black"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span>What is Instrumentum?</span>
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div x-show="activeAccordion==id" x-collapse="">
+              <div class="p-4 pt-2 text-zinc-500">
+                Instrumentum is a browser-native solution that allows you to summarize any document of your liking by just uploading it to our platform. Documents can and will be summarized regardless of nature and/or size.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span
+                >Why are we doing this?</span
+              >
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                Summarizing long documents and extracting key takeaways is a standard task across different industries and tools available online supporting long documents and providing good quality summaries are virtually non-existant. Given this gap, we decided to build Instrumentum.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span
+                >What is the difference with chatGPT?</span
+              >
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                chatGPT is a chatbot running on GPT LLMs developed by Open AI, whereas Instrumentum is a tool that generates summaries of uploaded documents. They are two different tools catering for different needs.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span
+                >How am I charged for using Instrumentum?</span
+              >
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                Radical transparency is one of our main values, and we believe in a no nonesense approach when it comes to how we price Instrumentum. The answer is very easy : for each page summarized, you will be charged only 10 cents.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span
+                >Are my documents or summaries stored at any point in time?</span
+              >
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                Your documents are yours. We do not store any documents whatsoever. Documents uploaded are encrypted for security purposes, and are not saved in our database. Summaries, which are also encrypted, are made available for 30 days before they are deleted from our database, so that you can access them for an extended period of time.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span>Is there a maximum size for documents uploaded?</span>
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+
+
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                To ensure a seamless performance for our pipleine, document size is currently capped at 50 Mb per document uploaded. 
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span
+                >Are there any storage limitations for files and documents?</span
+              >
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                Our platform provides ample storage space for your files and
+                documents. However, there may be storage limitations based on the
+                pricing plan you choose. We offer flexible plans to suit your
+                needs and provide options to upgrade if you require additional
+                storage capacity.
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ id: $id('accordion') }"
+            :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-accent-500': activeAccordion!=id }"
+            class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+          >
+            <button
+              @click="setActiveAccordion(id)"
+              class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+            >
+              <span>Is it possible to export my data from the platform?</span>
+              <svg
+                class="w-5 h-5 duration-300 ease-out text-accent-500"
+                :class="{ '-rotate-[45deg]': activeAccordion==id }"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v12m6-6H6"></path></svg
+              >
+            </button>
+            <div
+              x-show="activeAccordion==id"
+              x-collapse=""
+              style="display: none;"
+            >
+              <div class="p-4 pt-2 text-zinc-500">
+                Yes, you can export your data from the platform. We offer export
+                features that allow you to download your messages, files, and
+                documents, ensuring you have a local copy for backup or migration
+                purposes. It provides you with greater control and flexibility
+                over your data.
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+  </section>
+  
